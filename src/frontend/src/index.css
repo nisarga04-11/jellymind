@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Figtree";
+  src: url("/assets/fonts/Figtree.woff2") format("woff2");
+  font-weight: 300 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 1rem;
+    --background: 0.12 0.03 220;
+    --foreground: 1 0 0;
+    --card: 0.15 0.025 220;
+    --card-foreground: 1 0 0;
+    --popover: 0.18 0.03 220;
+    --popover-foreground: 1 0 0;
+    --primary: 0.82 0.12 210;
+    --primary-foreground: 0.12 0.03 220;
+    --secondary: 0.22 0.04 220;
+    --secondary-foreground: 0.83 0.04 215;
+    --muted: 0.2 0.03 220;
+    --muted-foreground: 0.68 0.05 215;
+    --accent: 0.65 0.2 280;
+    --accent-foreground: 1 0 0;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.35 0.04 220;
+    --input: 0.25 0.04 220;
+    --ring: 0.82 0.12 210;
+    --chart-1: 0.82 0.12 210;
+    --chart-2: 0.65 0.2 280;
+    --chart-3: 0.7 0.15 195;
+    --chart-4: 0.55 0.18 250;
+    --chart-5: 0.75 0.1 220;
+    --sidebar: 0.14 0.03 220;
+    --sidebar-foreground: 1 0 0;
+    --sidebar-primary: 0.82 0.12 210;
+    --sidebar-primary-foreground: 0.12 0.03 220;
+    --sidebar-accent: 0.22 0.04 220;
+    --sidebar-accent-foreground: 0.83 0.04 215;
+    --sidebar-border: 0.35 0.04 220;
+    --sidebar-ring: 0.82 0.12 210;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    background: linear-gradient(160deg, #04121f 0%, #061a2b 40%, #0b2c48 100%);
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 20px rgba(98, 217, 255, 0.3), 0 0 60px
+      rgba(98, 217, 255, 0.1);
+  }
+
+  .glow-violet {
+    box-shadow: 0 0 20px rgba(167, 123, 255, 0.3), 0 0 60px
+      rgba(167, 123, 255, 0.1);
+  }
+
+  .text-cyan-glow {
+    color: #62d9ff;
+    text-shadow: 0 0 20px rgba(98, 217, 255, 0.5);
+  }
+
+  .btn-glow {
+    box-shadow: 0 0 15px rgba(98, 217, 255, 0.4), 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .btn-glow:hover {
+    box-shadow: 0 0 25px rgba(98, 217, 255, 0.6), 0 4px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+  }
+}
